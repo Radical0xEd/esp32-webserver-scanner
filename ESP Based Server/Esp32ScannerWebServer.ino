@@ -98,7 +98,7 @@ void setup() {
   }
 
   // Connect to Wi-Fi
-  WiFi.begin("KRVL_Home_2.4_ext", "mart7-sandy-yon"); // Replace with your Wi-Fi credentials
+  WiFi.begin("MY SSID", "PWD"); // Replace with your Wi-Fi credentials
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
