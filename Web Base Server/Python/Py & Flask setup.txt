@@ -19,3 +19,27 @@ bash:
 python3 app.py
 Access it at http://localhost:5000.
 
+Wi-Fi Connection:
+
+The ESP32 connects to your specified Wi-Fi network.
+Update ssid and password with your Wi-Fi credentials.
+HTTP Requests:
+
+scanNetworks(): Sends a GET request to /api/scan.
+sniffTraffic(): Sends a GET request to /api/sniff.
+downloadLogs(): Sends a POST request to /api/logs.
+updateSettings(): Sends a POST request to /api/settings.
+Server Address:
+
+Replace 192.168.1.100 with the IP address of your computer running the Flask app.
+Logs:
+
+Responses from the Flask server are printed to the Serial Monitor.
+Setup Notes
+Make sure the Flask server and the ESP32 are on the same network.
+If your server address is dynamic, consider using mDNS or a static IP for your server.
+To test this setup:
+Start the Flask app (python3 app.py).
+Upload this code to the ESP32.
+Open the Serial Monitor to see the interaction.
+
