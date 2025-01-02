@@ -1,0 +1,29 @@
+Installing AsyncTCP Library
+Using Arduino Library Manager:
+
+Open the Arduino IDE.
+Go to Sketch > Include Library > Manage Libraries...
+Search for "AsyncTCP" in the Library Manager.
+Select the library by Me-No-Dev and click Install.
+Using GitHub (if Library Manager doesn’t work):
+
+Visit the AsyncTCP GitHub repository.
+Download the library as a ZIP file:
+Click Code > Download ZIP.
+Open Arduino IDE and go to Sketch > Include Library > Add .ZIP Library....
+Select the downloaded ZIP file to install the library.
+Ensure ESPAsyncWebServer is Installed
+The AsyncTCP library works alongside the ESPAsyncWebServer library. Ensure it is installed as well:
+
+Using Library Manager:
+
+Search for "ESPAsyncWebServer" in the Library Manager.
+Install the library by Me-No-Dev.
+Using GitHub:
+
+Visit the ESPAsyncWebServer GitHub repository.
+Download and install it as a ZIP library, as explained above.
+Verifying Installation
+After installing the libraries, restart the Arduino IDE.
+Verify the libraries are installed by navigating to: Sketch > Include Library.
+Check for AsyncTCP and ESPAsyncWebServer in the list of installed libraries.
