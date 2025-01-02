@@ -1,8 +1,8 @@
 # esp32-webserver-scanner
    
-   Ive broken several ESP's over the years from soldering mistakes to freak accidents.  These are some ways i found to still use them, also a good run for begginers.
+   Ive broken several ESP's over the years from soldering mistakes to freak accidents. The Use of these is actualy great because theres no break-out boar or cables needed. Just an easy to chang or adapt UI just plug aESP-32  in with USB-C and go.
 
-Library Requirements:
+# Library Requirements:
 
 Ensure you have the latest AsyncTCP and ESPAsyncWebServer libraries installed in your Arduino IDE or PlatformIO environment.
 
