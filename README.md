@@ -8,12 +8,13 @@ Ensure you have the latest AsyncTCP and ESPAsyncWebServer libraries installed in
 
    There is another project on this repo that is the same thing, but a little more advanced as the server is on the webs side and esp connects to that.  This First method I like because it can run on any esp even without use of UART-TX & UART-RX pins. (However you can program almost any pin to run the serial info) All You need to do is flash to esp.
 
-   ESP Based Server:
-   .Wi-Fi Credentials:
+   # ESP Based Server:
+   # Wi-Fi Credentials:
 
 Replace your_wifi_ssid and your_wifi_password with your network credentials for best results, Just change************* By defualt just plug a USB-C into esp and then go to "http://192.168.1.184" as this is defualt IP. Use this web interface to run various script on esp and the site. alternitavly you can use vcc and gnd pins and change IP under the Static IP. 
   
-  HTTP Endpoints: will update and should correspond with your esp's leds.
+ # HTTP Endpoints: will update and should correspond with your esp's leds.
+
 /: Confirms the server is running.
 /send: Sends a test message over UART.
 /read: Reads available data from UART and displays it.
