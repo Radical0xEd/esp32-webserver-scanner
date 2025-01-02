@@ -1,0 +1,32 @@
+Using Node.js and the Express framework is a popular and lightweight approach to creating web servers.
+
+1a. Install Node.js and npm
+Run the following commands to install Node.js and npm on Ubuntu:
+
+bash:
+
+sudo apt update
+sudo apt install nodejs npm
+
+1b. Set Up a Basic Express Server
+Create a new directory for your project:
+
+bash:
+
+mkdir esp32-control && cd esp32-control
+npm init -y
+Install Express:
+
+bash:
+
+npm install express
+Create a file named server.js:(see sever.js file)
+
+Create a public folder and save your index.html there.
+
+Run the server:
+
+bash:
+
+node server.js
+Access it at http://localhost:3000.

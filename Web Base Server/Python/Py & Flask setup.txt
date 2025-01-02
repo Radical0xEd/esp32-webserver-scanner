@@ -1,0 +1,21 @@
+If you’re comfortable with Python, Flask is a lightweight and powerful framework for web servers.
+
+a. Install Flask
+bash:
+
+sudo apt install python3 python3-pip
+pip3 install flask
+b. Create a Flask App
+Create a file named app.py:
+
+(See app.py)
+
+Create a public folder in the same directory and save your index.html there.
+
+Run the server:
+
+bash:
+
+python3 app.py
+Access it at http://localhost:5000.
+

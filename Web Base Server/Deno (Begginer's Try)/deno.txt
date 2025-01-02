@@ -1,0 +1,13 @@
+Static HTTP Server with APIs: Use http-server from npm to serve static files and a separate Node.js script for APIs.
+
+bash
+
+npm install -g http-server
+http-server public -p 8080
+NGINX with CGI Scripts: Serve your HTML with NGINX and handle APIs using CGI or Python scripts.
+
+Deno (Alternative to Node.js): Deno provides a secure runtime for JavaScript/TypeScript with a built-in HTTP server.
+
+bash
+
+deno run --allow-net server.ts
