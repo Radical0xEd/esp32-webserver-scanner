@@ -48,6 +48,8 @@ String scanWiFiNetworks() {
   String results = "";
   digitalWrite(BLUE_LED, HIGH); // Turn on blue LED during scanning
   int n = WiFi.scanNetworks();
+  Serial.print("Networks found: ");
+  Serial.println(n);
   for (int i = 0; i < n; i++) {
     results += "SSID: " + String(WiFi.SSID(i)) + ", RSSI: " + String(WiFi.RSSI(i)) + "\n";
   }
@@ -60,6 +62,8 @@ void handleClient(WiFiClient client) {
   String request = client.readStringUntil('\r');
   client.flush();
 
+  Serial.println(request); // Debug request
+
   if (request.indexOf("GET /scan") >= 0) {
     String results = scanWiFiNetworks();
     client.println("HTTP/1.1 200 OK");
@@ -67,7 +71,7 @@ void handleClient(WiFiClient client) {
     client.println();
     client.print(results);
   } else {
-    char htmlBuffer[2048];
+    char htmlBuffer[4096]; // Increased buffer size
     snprintf(htmlBuffer, sizeof(htmlBuffer), htmlPage, "No scan results yet. Click 'Start Scan'.");
     client.println("HTTP/1.1 200 OK");
     client.println("Content-Type: text/html");
@@ -85,6 +89,9 @@ void setup() {
   pinMode(YELLOW_LED, OUTPUT);
   pinMode(BLUE_LED, OUTPUT);
   digitalWrite(RED_LED, HIGH); // Turn on red LED initially
+
+  // Set Wi-Fi mode to station
+  WiFi.mode(WIFI_STA);
 
   // Initialize SPIFFS
   if (!SPIFFS.begin(true)) {
